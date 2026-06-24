@@ -1,0 +1,246 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    ViewData["Title"] = Model.Profile.Name + " — Portfolio";
+}
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero-section" id="hero">
+    <div class="hero-bg-blur"></div>
+    <div class="container hero-content">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-8">
+                <p class="hero-greeting">Hey, I'm</p>
+                <h1 class="hero-name">@Model.Profile.Name</h1>
+                <h2 class="hero-title">@Model.Profile.Title</h2>
+                <p class="hero-tagline">
+                    9+ years shipping production web apps &mdash; C#, .NET, React, and Azure.
+                    I like turning complex requirements into clean, maintainable code.
+                </p>
+                <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+                    <a href="#experience" class="btn btn-primary-custom">See My Work</a>
+                    <a href="#contact" class="btn btn-outline-custom">Get in Touch</a>
+                </div>
+                <div class="hero-badges d-flex flex-wrap gap-2 mt-4">
+                    <span class="badge-pill"><i class="bi bi-geo-alt me-1"></i>@Model.Profile.Location</span>
+                    <span class="badge-pill"><i class="bi bi-circle-fill text-success me-1" style="font-size:.55rem;vertical-align:middle"></i>Open to opportunities</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="scroll-down-indicator">
+        <i class="bi bi-chevron-down"></i>
+    </a>
+</section>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section class="section-block" id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">About</span>
+            <h2 class="section-title">A bit about me</h2>
+        </div>
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-7">
+                <p class="about-text">@Model.Profile.Summary</p>
+                <p class="about-text mt-3">
+                    Outside of work I enjoy tinkering with new tech, which usually means starting a side project
+                    and spending way too long making it production-grade. I'm mild-mannered, have a good sense of
+                    humour, and genuinely enjoy pairing on hard problems.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <div class="about-card">
+                    <div class="about-card-item">
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:@Model.Profile.Email">@Model.Profile.Email</a>
+                    </div>
+                    <div class="about-card-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>@Model.Profile.Location</span>
+                    </div>
+                    <div class="about-card-item">
+                        <i class="bi bi-linkedin"></i>
+                        <a href="@Model.Profile.LinkedInUrl" target="_blank" rel="noopener">linkedin.com/in/vivanwicaksono</a>
+                    </div>
+                    <div class="about-card-item">
+                        <i class="bi bi-github"></i>
+                        <a href="@Model.Profile.GitHubUrl" target="_blank" rel="noopener">github.com/vivanwicaksono</a>
+                    </div>
+                    <div class="about-card-item">
+                        <i class="bi bi-translate"></i>
+                        <span>English (professional) &middot; Indonesian (native)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════ EXPERIENCE ══════════════════════════════ -->
+<section class="section-block section-alt" id="experience">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Where I've worked</h2>
+        </div>
+        <div class="timeline">
+            @foreach (var exp in Model.Experiences)
+            {
+                <div class="timeline-item">
+                    <div class="timeline-dot @(exp.IsCurrent ? "dot-active" : "")"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">
+                                    @exp.Company
+                                    @if (exp.IsCurrent)
+                                    {
+                                        <span class="current-badge">Current</span>
+                                    }
+                                </h3>
+                                <p class="role-title">@exp.Role</p>
+                            </div>
+                            <span class="period-badge">@exp.Period</span>
+                        </div>
+
+                        @foreach (var project in exp.Projects)
+                        {
+                            <div class="project-card">
+                                <h4 class="project-name">@project.Name</h4>
+                                <p class="project-desc">@project.Description</p>
+                                @if (project.Highlights.Any())
+                                {
+                                    <ul class="project-highlights">
+                                        @foreach (var h in project.Highlights)
+                                        {
+                                            <li>@h</li>
+                                        }
+                                    </ul>
+                                }
+                                @if (project.Technologies.Any())
+                                {
+                                    <div class="tech-tags">
+                                        @foreach (var tech in project.Technologies)
+                                        {
+                                            <span class="tech-tag">@tech</span>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════ SKILLS ════════════════════════════════ -->
+<section class="section-block" id="skills">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Skills</span>
+            <h2 class="section-title">What I work with</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var group in Model.SkillGroups)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-group-card">
+                        <div class="skill-group-header">
+                            <i class="bi @group.Icon skill-icon"></i>
+                            <h4 class="skill-category">@group.Category</h4>
+                        </div>
+                        <div class="skill-tags">
+                            @foreach (var skill in group.Skills)
+                            {
+                                <span class="skill-tag">@skill</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════ EDUCATION ═════════════════════════════ -->
+<section class="section-block section-alt" id="education">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Education</span>
+            <h2 class="section-title">Academic background</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var edu in Model.Education)
+            {
+                <div class="col-md-8 col-lg-6">
+                    <div class="edu-card">
+                        <div class="edu-icon-wrap">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <div>
+                            <h3 class="edu-institution">@edu.Institution</h3>
+                            <p class="edu-degree">@edu.Degree</p>
+                            <div class="edu-meta d-flex flex-wrap gap-3 mt-2">
+                                <span><i class="bi bi-calendar3 me-1"></i>@edu.Period</span>
+                                <span><i class="bi bi-geo-alt me-1"></i>@edu.Location</span>
+                                <span><i class="bi bi-star me-1"></i>GPA @edu.Gpa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════ TESTIMONIALS ════════════════════════════ -->
+<section class="section-block" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What colleagues say</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var t in Model.Testimonials)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote testimonial-quote-icon"></i>
+                        <p class="testimonial-text">@t.Quote</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">@t.Author[0]</div>
+                            <div>
+                                <p class="author-name">@t.Author</p>
+                                <p class="author-role">@t.AuthorRole</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════ CONTACT ═══════════════════════════════ -->
+<section class="section-block contact-section" id="contact">
+    <div class="container text-center">
+        <div class="section-header">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">Let's connect</h2>
+        </div>
+        <p class="contact-sub">
+            Whether it's a project, a role, or just a chat about tech &mdash; I'd love to hear from you.
+        </p>
+        <div class="contact-actions d-flex flex-wrap justify-content-center gap-3 mt-5">
+            <a href="mailto:@Model.Profile.Email" class="btn btn-contact">
+                <i class="bi bi-envelope-fill me-2"></i>Send me an email
+            </a>
+            <a href="@Model.Profile.LinkedInUrl" target="_blank" rel="noopener" class="btn btn-contact-linkedin">
+                <i class="bi bi-linkedin me-2"></i>Connect on LinkedIn
+            </a>
+        </div>
+        <p class="contact-hint mt-4">@Model.Profile.Email</p>
+    </div>
+</section>
