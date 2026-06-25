@@ -1,6 +1,7 @@
 [
   {
     "company": "PT. Mitrais",
+    "companyLink": "https://www.mitrais.com/",
     "role": "Software Engineer — Full Stack (Web Applications)",
     "period": "October 2021 – Present",
     "isCurrent": true,
@@ -28,6 +29,7 @@
   },
   {
     "company": "AXA Financial Indonesia",
+    "companyLink": "https://www.axa.co.id/tentang-afi",
     "role": "Software Engineer — Full Stack (Web Applications)",
     "period": "September 2020 – October 2021",
     "isCurrent": false,
@@ -58,6 +60,7 @@
   },
   {
     "company": "CV. Indosoft",
+    "companyLink": "https://indo-soft.com/",
     "role": "Software Engineer — Full Stack (Web Applications)",
     "period": "March 2017 – September 2020",
     "isCurrent": false,
@@ -74,6 +77,7 @@
   },
   {
     "company": "Aminah Hospital",
+    "companyLink": "https://www.rsislamaminah.com/",
     "role": "Electronic Data Processing Division",
     "period": "December 2014 – March 2017",
     "isCurrent": false,

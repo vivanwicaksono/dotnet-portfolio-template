@@ -20,7 +20,19 @@
                             <i class="bi bi-mortarboard-fill"></i>
                         </div>
                         <div>
-                            @if (fields.Institution) { <h3 class="edu-institution">@edu.Institution</h3> }
+                            @if (fields.Institution)
+                            {
+                                <h3 class="edu-institution">
+                                    @if (!string.IsNullOrEmpty(edu.InstitutionLink))
+                                    {
+                                        <a href="@edu.InstitutionLink" target="_blank" rel="noopener noreferrer">@edu.Institution</a>
+                                    }
+                                    else
+                                    {
+                                        @edu.Institution
+                                    }
+                                </h3>
+                            }
                             @if (fields.Degree) { <p class="edu-degree">@edu.Degree</p> }
                             <div class="edu-meta d-flex flex-wrap gap-3 mt-2">
                                 @if (fields.Period) { <span><i class="bi bi-calendar3 me-1"></i>@edu.Period</span> }

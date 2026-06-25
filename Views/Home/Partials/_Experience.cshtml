@@ -22,7 +22,14 @@
                                 @if (fields.Company)
                                 {
                                     <h3 class="company-name">
-                                        @exp.Company
+                                        @if (!string.IsNullOrEmpty(exp.CompanyLink))
+                                        {
+                                            <a href="@exp.CompanyLink" target="_blank" rel="noopener noreferrer">@exp.Company</a>
+                                        }
+                                        else
+                                        {
+                                            @exp.Company
+                                        }
                                         @if (fields.CurrentBadge && exp.IsCurrent)
                                         {
                                             <span class="current-badge">Current</span>
