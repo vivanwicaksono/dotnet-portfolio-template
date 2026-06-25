@@ -43,5 +43,12 @@
   "contact": {
     "email": true,
     "linkedIn": true
+  },
+  "certifications": {
+    "name": true,
+    "issuer": true,
+    "issuedOn": true,
+    "expiresOn": true,
+    "credentialUrl": true
   }
 }

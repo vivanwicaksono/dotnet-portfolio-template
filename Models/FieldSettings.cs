@@ -9,6 +9,7 @@ public class FieldSettings
     public EducationFields Education { get; set; } = new();
     public TestimonialsFields Testimonials { get; set; } = new();
     public ContactFields Contact { get; set; } = new();
+    public CertificationsFields Certifications { get; set; } = new();
 }
 
 public class HeroFields
@@ -68,4 +69,13 @@ public class ContactFields
 {
     public bool Email { get; set; } = true;
     public bool LinkedIn { get; set; } = true;
+}
+
+public class CertificationsFields
+{
+    public bool Name { get; set; } = true;
+    public bool Issuer { get; set; } = true;
+    public bool IssuedOn { get; set; } = true;
+    public bool ExpiresOn { get; set; } = true;
+    public bool CredentialUrl { get; set; } = true;
 }

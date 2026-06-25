@@ -1,0 +1,53 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Certifications;
+    var titles = Model.TitleSettings.Certifications;
+}
+
+<!-- ════════════════════════════ CERTIFICATIONS ═════════════════════════════ -->
+<section class="section-block section-alt" id="certifications">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var cert in Model.Certifications)
+            {
+                <div class="col-md-8 col-lg-6">
+                    <div class="cert-card">
+                        <div class="cert-icon-wrap">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <div class="cert-body">
+                            @if (fields.Name)
+                            {
+                                <h3 class="cert-name">@cert.Name</h3>
+                            }
+                            @if (fields.Issuer)
+                            {
+                                <p class="cert-issuer">@cert.Issuer</p>
+                            }
+                            <div class="cert-meta d-flex flex-wrap gap-3 mt-2">
+                                @if (fields.IssuedOn)
+                                {
+                                    <span><i class="bi bi-calendar3 me-1"></i>Issued @cert.IssuedOn</span>
+                                }
+                                @if (fields.ExpiresOn && !string.IsNullOrEmpty(cert.ExpiresOn))
+                                {
+                                    <span><i class="bi bi-calendar-x me-1"></i>Expires @cert.ExpiresOn</span>
+                                }
+                            </div>
+                            @if (fields.CredentialUrl && !string.IsNullOrEmpty(cert.CredentialUrl))
+                            {
+                                <a href="@cert.CredentialUrl" target="_blank" rel="noopener noreferrer" class="cert-link mt-3">
+                                    Show credential <i class="bi bi-arrow-up-right ms-1"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
