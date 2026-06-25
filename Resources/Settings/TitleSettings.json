@@ -1,4 +1,9 @@
 {
+  "layout": {
+    "brandName": "vivanwicaksono",
+    "footerText": "Built with ASP.NET Core MVC",
+    "footerCredit": "Vivan Eko Wicaksono"
+  },
   "hero": {
     "greeting": "Hey, I'm",
     "tagline": "9+ years shipping production web apps — C#, .NET, React, and Azure. I like turning complex requirements into clean, maintainable code.",

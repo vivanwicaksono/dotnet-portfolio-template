@@ -2,6 +2,7 @@ namespace VivanPortfolio.Models;
 
 public class TitleSettings
 {
+    public LayoutTitles Layout { get; set; } = new();
     public HeroTitles Hero { get; set; } = new();
     public AboutTitles About { get; set; } = new();
     public SectionLabel Experience { get; set; } = new();
@@ -9,6 +10,13 @@ public class TitleSettings
     public SectionLabel Education { get; set; } = new();
     public SectionLabel Testimonials { get; set; } = new();
     public ContactTitles Contact { get; set; } = new();
+}
+
+public class LayoutTitles
+{
+    public string BrandName { get; set; } = string.Empty;
+    public string FooterText { get; set; } = string.Empty;
+    public string FooterCredit { get; set; } = string.Empty;
 }
 
 public class SectionLabel
