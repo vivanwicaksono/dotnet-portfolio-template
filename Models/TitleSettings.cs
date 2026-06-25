@@ -18,6 +18,8 @@ public class LayoutTitles
     public string BrandName { get; set; } = string.Empty;
     public string FooterText { get; set; } = string.Empty;
     public string FooterCredit { get; set; } = string.Empty;
+    public string Favicon { get; set; } = string.Empty;
+    public string TouchIcon { get; set; } = string.Empty;
 }
 
 public class SectionLabel
@@ -34,6 +36,7 @@ public class HeroTitles
     public string CtaSecondary { get; set; } = string.Empty;
     public string OpenToOpportunities { get; set; } = string.Empty;
     public string ProfileImage { get; set; } = string.Empty;
+    public string HeroBackground { get; set; } = string.Empty;
 }
 
 public class AboutTitles : SectionLabel

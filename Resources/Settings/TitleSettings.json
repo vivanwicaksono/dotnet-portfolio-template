@@ -2,7 +2,9 @@
   "layout": {
     "brandName": "vivanwicaksono",
     "footerText": "Built with ASP.NET Core MVC",
-    "footerCredit": "Vivan Eko Wicaksono"
+    "footerCredit": "Vivan Eko Wicaksono",
+    "favicon": "/favicon.ico",
+    "touchIcon": "/icon.png"
   },
   "hero": {
     "greeting": "Hey, I'm",
@@ -10,7 +12,8 @@
     "ctaPrimary": "See My Work",
     "ctaSecondary": "Get in Touch",
     "openToOpportunities": "Open to opportunities",
-    "profileImage": "/images/profile.jpg"
+    "profileImage": "/images/profile.jpg",
+    "heroBackground": "/images/hero-bg.png"
   },
   "about": {
     "tag": "About",

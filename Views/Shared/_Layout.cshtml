@@ -1,9 +1,22 @@
+@{
+    var layoutTitles = ViewData["LayoutTitles"] as VivanPortfolio.Models.LayoutTitles ?? new();
+    var navSections = ViewData["SectionSettings"] as List<SectionSetting> ?? new();
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
+    @if (!string.IsNullOrEmpty(layoutTitles.Favicon))
+    {
+        <link rel="icon" type="image/x-icon" href="@layoutTitles.Favicon" />
+    }
+    @if (!string.IsNullOrEmpty(layoutTitles.TouchIcon))
+    {
+        <link rel="icon" type="image/png" sizes="512x512" href="@layoutTitles.TouchIcon" />
+        <link rel="apple-touch-icon" href="@layoutTitles.TouchIcon" />
+    }
     <script type="importmap"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +28,6 @@
 <body>
     <nav class="site-nav navbar navbar-expand-md fixed-top" id="mainNav">
         <div class="container">
-            @{
-                var layoutTitles = ViewData["LayoutTitles"] as LayoutTitles ?? new();
-            }
             <a class="navbar-brand fw-semibold" href="#hero">@layoutTitles.BrandName</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
                     aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,9 +35,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto gap-1">
-                    @{
-                        var navSections = ViewData["SectionSettings"] as List<SectionSetting> ?? new();
-                    }
                     @foreach (var s in navSections.Where(s => s.Enabled && s.Key != "hero").OrderBy(s => s.Order))
                     {
                         <li class="nav-item">
