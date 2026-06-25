@@ -1,0 +1,89 @@
+[
+  {
+    "company": "PT. Mitrais",
+    "role": "Software Engineer — Full Stack (Web Applications)",
+    "period": "October 2021 – Present",
+    "isCurrent": true,
+    "projects": [
+      {
+        "name": "Reservation Application",
+        "description": "Designed and developed a web-based reservation portal for agents and organisation users, covering reservation and reporting, availability calculation, multi-currency pricing, and automatic generation of reservation-product rules.",
+        "highlights": [
+          "Led a small Agile/Scrum development team, running sprint planning and daily stand-ups while providing technical direction.",
+          "Implemented complex business logic including availability calculation and multi-currency pricing via .NET Web API + NextJS.",
+          "Built and deployed on Microsoft Azure using Azure DevOps CI/CD, Container Apps, PostgreSQL, Private DNS, and Key Vault."
+        ],
+        "technologies": [".NET Web API", "C#", "NextJS", "TypeScript", "Azure DevOps", "Azure Container Apps", "PostgreSQL", "Azure Key Vault"]
+      },
+      {
+        "name": "Third-Party Administrator (TPA) Insurance Platform",
+        "description": "Developed a web-based portal to manage cashless and reimbursement claims for insurance — four distinct portals: hospital, customer, master, and claim.",
+        "highlights": [
+          "Optimized query loops to cut processing time — reimbursement upload handles 10,000 records in a single file without errors.",
+          "Implemented RabbitMQ messaging to keep the processing queue stable and recover gracefully during system glitches."
+        ],
+        "technologies": ["ASP.NET MVC", "C#", "SQL Server", "RabbitMQ", "jQuery", "Bootstrap"]
+      }
+    ]
+  },
+  {
+    "company": "AXA Financial Indonesia",
+    "role": "Software Engineer — Full Stack (Web Applications)",
+    "period": "September 2020 – October 2021",
+    "isCurrent": false,
+    "projects": [
+      {
+        "name": "Free Insurance Redemption Portal",
+        "description": "Developed a redemption portal for the partnership division (public and admin sites) with a voucher generator that creates up to 10,000 unique vouchers per action.",
+        "highlights": [
+          "Portal's claimable-voucher metrics informed a successful phase 2 decision with the partner."
+        ],
+        "technologies": ["ASP.NET MVC", "C#", "SQL Server", "jQuery", "Bootstrap"]
+      },
+      {
+        "name": "Insurance E-buy Portal",
+        "description": "Developed and maintained an e-buy portal using ASP.NET MVC, jQuery, and Kentico, fixing front-end and back-end defects and building custom Kentico reports.",
+        "highlights": [
+          "Helped grow Annual Premium Equivalent (APE) from e-commerce by over 100% in November 2020 by optimizing e-commerce pages."
+        ],
+        "technologies": ["ASP.NET MVC", "C#", "Kentico", "SQL Server", "jQuery"]
+      },
+      {
+        "name": "Insurance Payment Portal",
+        "description": "Developed the front end of the payment portal in ReactJS and resolved front-end defects to ensure correct behaviour across tablet and mobile screen sizes.",
+        "highlights": [],
+        "technologies": ["ReactJS", "JavaScript", "CSS"]
+      }
+    ]
+  },
+  {
+    "company": "CV. Indosoft",
+    "role": "Software Engineer — Full Stack (Web Applications)",
+    "period": "March 2017 – September 2020",
+    "isCurrent": false,
+    "projects": [
+      {
+        "name": "Scholarship Application Program",
+        "description": "Developed and maintained a scholarship platform with administrator, student, reviewer, reference, and selection-committee portals — covering scoring, document management, validation, and approval workflows.",
+        "highlights": [
+          "Designed workflow across five stakeholder portals so each role focused on its own tasks, streamlining the university's end-to-end review process."
+        ],
+        "technologies": ["ASP.NET MVC", "C#", "MSSQL", "jQuery", "CSS"]
+      }
+    ]
+  },
+  {
+    "company": "Aminah Hospital",
+    "role": "Electronic Data Processing Division",
+    "period": "December 2014 – March 2017",
+    "isCurrent": false,
+    "projects": [
+      {
+        "name": "Hospital Information System",
+        "description": "Developed and maintained hospital applications, including medical record and sub-financial modules that reduced transaction time.",
+        "highlights": [],
+        "technologies": ["C#", "ASP.NET", "SQL Server"]
+      }
+    ]
+  }
+]

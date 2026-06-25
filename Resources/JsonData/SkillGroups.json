@@ -1,0 +1,32 @@
+[
+  {
+    "category": "Languages",
+    "icon": "bi-code-slash",
+    "skills": ["C#", "JavaScript", "TypeScript", "jQuery", "HTML", "CSS"]
+  },
+  {
+    "category": "Frameworks & Web",
+    "icon": "bi-layers",
+    "skills": [".NET Core", "ASP.NET MVC", "ASP.NET Web API", "Entity Framework", "LINQ", "ReactJS", "NextJS", "Bootstrap", "Kentico CMS", "WCF"]
+  },
+  {
+    "category": "Databases",
+    "icon": "bi-database",
+    "skills": ["SQL Server (T-SQL)", "PostgreSQL", "MySQL", "MariaDB", "MongoDB", "SQLite"]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "icon": "bi-cloud",
+    "skills": ["Microsoft Azure", "Azure Container Apps", "Azure DevOps", "CI/CD Pipelines", "Azure Key Vault"]
+  },
+  {
+    "category": "Tools & Testing",
+    "icon": "bi-tools",
+    "skills": ["Git", "Bitbucket", "RabbitMQ", "NUnit", "Postman"]
+  },
+  {
+    "category": "Practices",
+    "icon": "bi-person-workspace",
+    "skills": ["Agile / Scrum", "Requirements Analysis", "Performance Optimization", "Code Reuse", "Small-Team Leadership"]
+  }
+]
