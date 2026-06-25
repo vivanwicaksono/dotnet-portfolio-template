@@ -1,0 +1,60 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.About;
+    var titles = Model.TitleSettings.About;
+}
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section class="section-block" id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-7">
+                @if (fields.Summary) { <p class="about-text">@Model.Profile.Summary</p> }
+                <p class="about-text mt-3">@titles.ExtraText</p>
+            </div>
+            <div class="col-lg-5">
+                <div class="about-card">
+                    @if (fields.Email)
+                    {
+                        <div class="about-card-item">
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:@Model.Profile.Email">@Model.Profile.Email</a>
+                        </div>
+                    }
+                    @if (fields.Location)
+                    {
+                        <div class="about-card-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>@Model.Profile.Location</span>
+                        </div>
+                    }
+                    @if (fields.LinkedIn)
+                    {
+                        <div class="about-card-item">
+                            <i class="bi bi-linkedin"></i>
+                            <a href="@Model.Profile.LinkedInUrl" target="_blank" rel="noopener">linkedin.com/in/vivanwicaksono</a>
+                        </div>
+                    }
+                    @if (fields.GitHub)
+                    {
+                        <div class="about-card-item">
+                            <i class="bi bi-github"></i>
+                            <a href="@Model.Profile.GitHubUrl" target="_blank" rel="noopener">github.com/vivanwicaksono</a>
+                        </div>
+                    }
+                    @if (fields.Languages)
+                    {
+                        <div class="about-card-item">
+                            <i class="bi bi-translate"></i>
+                            <span>@titles.Languages</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

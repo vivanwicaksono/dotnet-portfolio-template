@@ -11,6 +11,9 @@ public class PortfolioService(IPortfolioRepository repository) : IPortfolioServi
         Experiences = repository.GetExperiences(),
         SkillGroups = repository.GetSkillGroups(),
         Education = repository.GetEducation(),
-        Testimonials = repository.GetTestimonials()
+        Testimonials = repository.GetTestimonials(),
+        SectionSettings = repository.GetSectionSettings(),
+        FieldSettings = repository.GetFieldSettings(),
+        TitleSettings = repository.GetTitleSettings()
     };
 }

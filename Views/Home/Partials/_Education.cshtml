@@ -1,0 +1,48 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Education;
+    var titles = Model.TitleSettings.Education;
+}
+
+<!-- ════════════════════════════ EDUCATION ═════════════════════════════ -->
+<section class="section-block section-alt" id="education">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var edu in Model.Education)
+            {
+                <div class="col-md-8 col-lg-6">
+                    <div class="edu-card">
+                        <div class="edu-icon-wrap">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <div>
+                            @if (fields.Institution)
+                            {
+                                <h3 class="edu-institution">
+                                    @if (!string.IsNullOrEmpty(edu.InstitutionLink))
+                                    {
+                                        <a href="@edu.InstitutionLink" target="_blank" rel="noopener noreferrer">@edu.Institution</a>
+                                    }
+                                    else
+                                    {
+                                        @edu.Institution
+                                    }
+                                </h3>
+                            }
+                            @if (fields.Degree) { <p class="edu-degree">@edu.Degree</p> }
+                            <div class="edu-meta d-flex flex-wrap gap-3 mt-2">
+                                @if (fields.Period) { <span><i class="bi bi-calendar3 me-1"></i>@edu.Period</span> }
+                                @if (fields.Location) { <span><i class="bi bi-geo-alt me-1"></i>@edu.Location</span> }
+                                @if (fields.Gpa) { <span><i class="bi bi-star me-1"></i>GPA @edu.Gpa</span> }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+{
+  "layout": {
+    "brandName": "vivanwicaksono",
+    "footerText": "Built with ASP.NET Core MVC",
+    "footerCredit": "Vivan Eko Wicaksono"
+  },
+  "hero": {
+    "greeting": "Hey, I'm",
+    "tagline": "9+ years shipping production web apps — C#, .NET, React, and Azure. I like turning complex requirements into clean, maintainable code.",
+    "ctaPrimary": "See My Work",
+    "ctaSecondary": "Get in Touch",
+    "openToOpportunities": "Open to opportunities"
+  },
+  "about": {
+    "tag": "About",
+    "title": "A bit about me",
+    "extraText": "Outside of work I enjoy tinkering with new tech, which usually means starting a side project and spending way too long making it production-grade. I’m mild-mannered, have a good sense of humour, and genuinely enjoy pairing on hard problems.",
+    "languages": "English (professional) · Indonesian (native)"
+  },
+  "experience": {
+    "tag": "Experience",
+    "title": "Where I've worked"
+  },
+  "skills": {
+    "tag": "Skills",
+    "title": "What I work with"
+  },
+  "education": {
+    "tag": "Education",
+    "title": "Academic background"
+  },
+  "testimonials": {
+    "tag": "Testimonials",
+    "title": "What colleagues say"
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Let's connect",
+    "description": "Whether it’s a project, a role, or just a chat about tech — I’d love to hear from you.",
+    "emailButton": "Send me an email",
+    "linkedInButton": "Connect on LinkedIn"
+  }
+}

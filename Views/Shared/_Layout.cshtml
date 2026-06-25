@@ -15,19 +15,25 @@
 <body>
     <nav class="site-nav navbar navbar-expand-md fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-semibold" href="#hero">vivanwicaksono</a>
+            @{
+                var layoutTitles = ViewData["LayoutTitles"] as LayoutTitles ?? new();
+            }
+            <a class="navbar-brand fw-semibold" href="#hero">@layoutTitles.BrandName</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
                     aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto gap-1">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    @{
+                        var navSections = ViewData["SectionSettings"] as List<SectionSetting> ?? new();
+                    }
+                    @foreach (var s in navSections.Where(s => s.Enabled && s.Key != "hero").OrderBy(s => s.Order))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="#@s.Key">@(char.ToUpper(s.Key[0]) + s.Key[1..])</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
@@ -40,7 +46,7 @@
     <footer class="site-footer text-center py-4">
         <div class="container">
             <p class="mb-0 text-muted small">
-                Built with ASP.NET Core MVC &mdash; &copy; @DateTime.Now.Year Vivan Eko Wicaksono
+                @layoutTitles.FooterText &mdash; &copy; @DateTime.Now.Year @layoutTitles.FooterCredit
             </p>
         </div>
     </footer>

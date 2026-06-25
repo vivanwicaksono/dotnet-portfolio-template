@@ -1,0 +1,31 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Contact;
+    var titles = Model.TitleSettings.Contact;
+}
+
+<!-- ════════════════════════════ CONTACT ═══════════════════════════════ -->
+<section class="section-block contact-section" id="contact">
+    <div class="container text-center">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <p class="contact-sub">@titles.Description</p>
+        <div class="contact-actions d-flex flex-wrap justify-content-center gap-3 mt-5">
+            @if (fields.Email)
+            {
+                <a href="mailto:@Model.Profile.Email" class="btn btn-contact">
+                    <i class="bi bi-envelope-fill me-2"></i>@titles.EmailButton
+                </a>
+            }
+            @if (fields.LinkedIn)
+            {
+                <a href="@Model.Profile.LinkedInUrl" target="_blank" rel="noopener" class="btn btn-contact-linkedin">
+                    <i class="bi bi-linkedin me-2"></i>@titles.LinkedInButton
+                </a>
+            }
+        </div>
+        @if (fields.Email) { <p class="contact-hint mt-4">@Model.Profile.Email</p> }
+    </div>
+</section>

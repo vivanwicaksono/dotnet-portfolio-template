@@ -9,4 +9,7 @@ public interface IPortfolioRepository
     List<SkillGroup> GetSkillGroups();
     List<Education> GetEducation();
     List<Testimonial> GetTestimonials();
+    List<SectionSetting> GetSectionSettings();
+    FieldSettings GetFieldSettings();
+    TitleSettings GetTitleSettings();
 }

@@ -8,6 +8,8 @@ public class HomeController(IPortfolioService portfolioService) : Controller
     public IActionResult Index()
     {
         var viewModel = portfolioService.GetPortfolioViewModel();
+        ViewData["SectionSettings"] = viewModel.SectionSettings;
+        ViewData["LayoutTitles"] = viewModel.TitleSettings.Layout;
         return View(viewModel);
     }
 }

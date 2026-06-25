@@ -1,0 +1,74 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Experience;
+    var titles = Model.TitleSettings.Experience;
+}
+
+<!-- ══════════════════════════ EXPERIENCE ══════════════════════════════ -->
+<section class="section-block section-alt" id="experience">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="timeline">
+            @foreach (var exp in Model.Experiences)
+            {
+                <div class="timeline-item">
+                    <div class="timeline-dot @(exp.IsCurrent ? "dot-active" : "")"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                @if (fields.Company)
+                                {
+                                    <h3 class="company-name">
+                                        @if (!string.IsNullOrEmpty(exp.CompanyLink))
+                                        {
+                                            <a href="@exp.CompanyLink" target="_blank" rel="noopener noreferrer">@exp.Company</a>
+                                        }
+                                        else
+                                        {
+                                            @exp.Company
+                                        }
+                                        @if (fields.CurrentBadge && exp.IsCurrent)
+                                        {
+                                            <span class="current-badge">Current</span>
+                                        }
+                                    </h3>
+                                }
+                                @if (fields.Role) { <p class="role-title">@exp.Role</p> }
+                            </div>
+                            @if (fields.Period) { <span class="period-badge">@exp.Period</span> }
+                        </div>
+
+                        @foreach (var project in exp.Projects)
+                        {
+                            <div class="project-card">
+                                @if (fields.ProjectName) { <h4 class="project-name">@project.Name</h4> }
+                                @if (fields.ProjectDescription) { <p class="project-desc">@project.Description</p> }
+                                @if (fields.ProjectHighlights && project.Highlights.Any())
+                                {
+                                    <ul class="project-highlights">
+                                        @foreach (var h in project.Highlights)
+                                        {
+                                            <li>@h</li>
+                                        }
+                                    </ul>
+                                }
+                                @if (fields.ProjectTechnologies && project.Technologies.Any())
+                                {
+                                    <div class="tech-tags">
+                                        @foreach (var tech in project.Technologies)
+                                        {
+                                            <span class="tech-tag">@tech</span>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

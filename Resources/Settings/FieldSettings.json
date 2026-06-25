@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "name": true,
+    "title": true,
+    "location": true,
+    "openToOpportunities": true
+  },
+  "about": {
+    "summary": true,
+    "email": true,
+    "location": true,
+    "linkedIn": true,
+    "gitHub": true,
+    "languages": true
+  },
+  "experience": {
+    "company": true,
+    "role": true,
+    "period": true,
+    "currentBadge": true,
+    "projectName": true,
+    "projectDescription": true,
+    "projectHighlights": true,
+    "projectTechnologies": true
+  },
+  "skills": {
+    "icon": true,
+    "category": true,
+    "skillTags": true
+  },
+  "education": {
+    "institution": true,
+    "degree": true,
+    "period": true,
+    "location": true,
+    "gpa": false
+  },
+  "testimonials": {
+    "quote": true,
+    "author": true,
+    "authorRole": true
+  },
+  "contact": {
+    "email": true,
+    "linkedIn": true
+  }
+}

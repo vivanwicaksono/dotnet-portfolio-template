@@ -9,9 +9,9 @@ public static class JsonDataLoader
         PropertyNameCaseInsensitive = true
     };
 
-    public static T Load<T>(string fileName)
+    public static T Load<T>(string fileName, string subFolder = "JsonData")
     {
-        var path = Path.Combine(AppContext.BaseDirectory, "Resources", "JsonData", fileName);
+        var path = Path.Combine(AppContext.BaseDirectory, "Resources", subFolder, fileName);
         var json = File.ReadAllText(path);
         return JsonSerializer.Deserialize<T>(json, Options)!;
     }

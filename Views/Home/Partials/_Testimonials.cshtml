@@ -1,0 +1,33 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Testimonials;
+    var titles = Model.TitleSettings.Testimonials;
+}
+
+<!-- ══════════════════════════ TESTIMONIALS ════════════════════════════ -->
+<section class="section-block" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var t in Model.Testimonials)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <i class="bi bi-quote testimonial-quote-icon"></i>
+                        @if (fields.Quote) { <p class="testimonial-text">@t.Quote</p> }
+                        <div class="testimonial-author">
+                            <div class="author-avatar">@t.Author[0]</div>
+                            <div>
+                                @if (fields.Author) { <p class="author-name">@t.Author</p> }
+                                @if (fields.AuthorRole) { <p class="author-role">@t.AuthorRole</p> }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
