@@ -19,4 +19,13 @@ public class PortfolioRepository : IPortfolioRepository
 
     public List<Testimonial> GetTestimonials() =>
         JsonDataLoader.Load<List<Testimonial>>("Testimonials.json");
+
+    public List<SectionSetting> GetSectionSettings() =>
+        JsonDataLoader.Load<List<SectionSetting>>("SectionSettings.json", "Settings");
+
+    public FieldSettings GetFieldSettings() =>
+        JsonDataLoader.Load<FieldSettings>("FieldSettings.json", "Settings");
+
+    public TitleSettings GetTitleSettings() =>
+        JsonDataLoader.Load<TitleSettings>("TitleSettings.json", "Settings");
 }
