@@ -9,7 +9,8 @@
     "tagline": "9+ years shipping production web apps — C#, .NET, React, and Azure. I like turning complex requirements into clean, maintainable code.",
     "ctaPrimary": "See My Work",
     "ctaSecondary": "Get in Touch",
-    "openToOpportunities": "Open to opportunities"
+    "openToOpportunities": "Open to opportunities",
+    "profileImage": "/images/profile.jpg"
   },
   "about": {
     "tag": "About",

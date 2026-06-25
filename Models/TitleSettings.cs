@@ -32,6 +32,7 @@ public class HeroTitles
     public string CtaPrimary { get; set; } = string.Empty;
     public string CtaSecondary { get; set; } = string.Empty;
     public string OpenToOpportunities { get; set; } = string.Empty;
+    public string ProfileImage { get; set; } = string.Empty;
 }
 
 public class AboutTitles : SectionLabel
