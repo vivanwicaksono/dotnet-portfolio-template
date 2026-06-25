@@ -10,6 +10,8 @@ public class HomeController(IPortfolioService portfolioService) : Controller
         var viewModel = portfolioService.GetPortfolioViewModel();
         ViewData["SectionSettings"] = viewModel.SectionSettings;
         ViewData["LayoutTitles"] = viewModel.TitleSettings.Layout;
+        ViewData["SeoSettings"] = viewModel.SeoSettings;
+        ViewData["Profile"] = viewModel.Profile;
         return View(viewModel);
     }
 }

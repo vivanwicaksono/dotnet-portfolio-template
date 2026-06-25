@@ -21,6 +21,16 @@ app.UseAuthorization();
 app.MapStaticAssets();
 
 app.MapControllerRoute(
+    name: "sitemap",
+    pattern: "sitemap.xml",
+    defaults: new { controller = "Sitemap", action = "Index" });
+
+app.MapControllerRoute(
+    name: "robots",
+    pattern: "robots.txt",
+    defaults: new { controller = "Sitemap", action = "Robots" });
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();

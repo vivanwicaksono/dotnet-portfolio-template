@@ -14,4 +14,5 @@ public interface IPortfolioRepository
     List<SectionSetting> GetSectionSettings();
     FieldSettings GetFieldSettings();
     TitleSettings GetTitleSettings();
+    SeoSettings GetSeoSettings();
 }

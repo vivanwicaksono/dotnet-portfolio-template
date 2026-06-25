@@ -16,6 +16,7 @@ public class PortfolioService(IPortfolioRepository repository) : IPortfolioServi
         PersonalProjects = repository.GetPersonalProjects(),
         SectionSettings = repository.GetSectionSettings(),
         FieldSettings = repository.GetFieldSettings(),
-        TitleSettings = repository.GetTitleSettings()
+        TitleSettings = repository.GetTitleSettings(),
+        SeoSettings = repository.GetSeoSettings()
     };
 }

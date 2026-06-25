@@ -35,4 +35,7 @@ public class PortfolioRepository : IPortfolioRepository
 
     public TitleSettings GetTitleSettings() =>
         JsonDataLoader.Load<TitleSettings>(DataFileNames.TitleSettings, "Settings");
+
+    public SeoSettings GetSeoSettings() =>
+        JsonDataLoader.Load<SeoSettings>(DataFileNames.SeoSettings, "Settings");
 }
