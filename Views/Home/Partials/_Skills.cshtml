@@ -1,0 +1,37 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Skills;
+    var titles = Model.TitleSettings.Skills;
+}
+
+<!-- ════════════════════════════ SKILLS ════════════════════════════════ -->
+<section class="section-block" id="skills">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var group in Model.SkillGroups)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-group-card">
+                        <div class="skill-group-header">
+                            @if (fields.Icon) { <i class="bi @group.Icon skill-icon"></i> }
+                            @if (fields.Category) { <h4 class="skill-category">@group.Category</h4> }
+                        </div>
+                        @if (fields.SkillTags)
+                        {
+                            <div class="skill-tags">
+                                @foreach (var skill in group.Skills)
+                                {
+                                    <span class="skill-tag">@skill</span>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

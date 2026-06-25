@@ -1,0 +1,37 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Hero;
+    var titles = Model.TitleSettings.Hero;
+}
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero-section" id="hero">
+    <div class="hero-bg-blur"></div>
+    <div class="container hero-content">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-8">
+                <p class="hero-greeting">@titles.Greeting</p>
+                @if (fields.Name) { <h1 class="hero-name">@Model.Profile.Name</h1> }
+                @if (fields.Title) { <h2 class="hero-title">@Model.Profile.Title</h2> }
+                <p class="hero-tagline">@titles.Tagline</p>
+                <div class="hero-actions d-flex flex-wrap gap-3 mt-4">
+                    <a href="#experience" class="btn btn-primary-custom">@titles.CtaPrimary</a>
+                    <a href="#contact" class="btn btn-outline-custom">@titles.CtaSecondary</a>
+                </div>
+                <div class="hero-badges d-flex flex-wrap gap-2 mt-4">
+                    @if (fields.Location)
+                    {
+                        <span class="badge-pill"><i class="bi bi-geo-alt me-1"></i>@Model.Profile.Location</span>
+                    }
+                    @if (fields.OpenToOpportunities)
+                    {
+                        <span class="badge-pill"><i class="bi bi-circle-fill text-success me-1" style="font-size:.55rem;vertical-align:middle"></i>@titles.OpenToOpportunities</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="scroll-down-indicator">
+        <i class="bi bi-chevron-down"></i>
+    </a>
+</section>
