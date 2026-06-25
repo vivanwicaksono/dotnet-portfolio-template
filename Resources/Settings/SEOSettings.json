@@ -1,0 +1,20 @@
+{
+  "siteUrl": "https://vivanwicaksono.com",
+  "title": "Vivan Eko Wicaksono — Software Engineer & Full Stack Developer",
+  "description": "Software Engineer with 9+ years of experience in C#, .NET, React, and Azure. Available for freelance and contract work.",
+  "keywords": "software engineer, remote software engineer, .NET developer, C# developer, React developer, full stack developer, ASP.NET, Azure, freelance developer, remote work, Indonesia",
+  "author": "Vivan Eko Wicaksono",
+  "ogImage": "/images/profile.jpg",
+  "ogType": "website",
+  "twitterCard": "summary_large_image",
+  "twitterHandle": "",
+  "robots": "index, follow",
+  "sitemap": {
+    "enabled": true,
+    "changefreq": "weekly",
+    "priority": 0.8
+  },
+  "schema": {
+    "enabled": true
+  }
+}

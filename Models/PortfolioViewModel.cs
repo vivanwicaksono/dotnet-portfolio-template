@@ -12,4 +12,5 @@ public class PortfolioViewModel
     public List<SectionSetting> SectionSettings { get; set; } = new();
     public FieldSettings FieldSettings { get; set; } = new();
     public TitleSettings TitleSettings { get; set; } = new();
+    public SeoSettings SeoSettings { get; set; } = new();
 }

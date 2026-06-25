@@ -12,4 +12,5 @@ public static class DataFileNames
     public const string SectionSettings = "SectionSettings.json";
     public const string FieldSettings = "FieldSettings.json";
     public const string TitleSettings = "TitleSettings.json";
+    public const string SeoSettings = "SEOSettings.json";
 }

@@ -1,13 +1,112 @@
+@using System.Collections.Generic
 @{
     var layoutTitles = ViewData["LayoutTitles"] as VivanPortfolio.Models.LayoutTitles ?? new();
     var navSections = ViewData["SectionSettings"] as List<SectionSetting> ?? new();
+    var seo = ViewData["SeoSettings"] as VivanPortfolio.Models.SeoSettings ?? new();
+    var profile = ViewData["Profile"] as VivanPortfolio.Models.Profile ?? new();
+
+    var pageTitle = !string.IsNullOrEmpty(seo.Title) ? seo.Title : (ViewData["Title"]?.ToString() ?? "");
+    var baseUrl = seo.SiteUrl.TrimEnd('/');
+    var canonicalUrl = string.IsNullOrEmpty(baseUrl) ? "" : baseUrl + "/";
+    var ogImageUrl = (!string.IsNullOrEmpty(baseUrl) && !string.IsNullOrEmpty(seo.OgImage))
+        ? baseUrl + seo.OgImage
+        : "";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
+    <title>@pageTitle</title>
+
+    @* Core SEO *@
+    @if (!string.IsNullOrEmpty(seo.Description))
+    {
+        <meta name="description" content="@seo.Description" />
+    }
+    @if (!string.IsNullOrEmpty(seo.Keywords))
+    {
+        <meta name="keywords" content="@seo.Keywords" />
+    }
+    @if (!string.IsNullOrEmpty(seo.Author))
+    {
+        <meta name="author" content="@seo.Author" />
+    }
+    @if (!string.IsNullOrEmpty(seo.Robots))
+    {
+        <meta name="robots" content="@seo.Robots" />
+    }
+    @if (!string.IsNullOrEmpty(canonicalUrl))
+    {
+        <link rel="canonical" href="@canonicalUrl" />
+    }
+
+    @* Open Graph *@
+    @if (!string.IsNullOrEmpty(canonicalUrl))
+    {
+        <meta property="og:type" content="@(string.IsNullOrEmpty(seo.OgType) ? "website" : seo.OgType)" />
+        <meta property="og:url" content="@canonicalUrl" />
+        <meta property="og:title" content="@pageTitle" />
+        @if (!string.IsNullOrEmpty(seo.Description))
+        {
+            <meta property="og:description" content="@seo.Description" />
+        }
+        @if (!string.IsNullOrEmpty(ogImageUrl))
+        {
+            <meta property="og:image" content="@ogImageUrl" />
+        }
+    }
+
+    @* Twitter Card *@
+    @if (!string.IsNullOrEmpty(seo.TwitterCard))
+    {
+        <meta name="twitter:card" content="@seo.TwitterCard" />
+        @if (!string.IsNullOrEmpty(seo.TwitterHandle))
+        {
+            <meta name="twitter:site" content="@seo.TwitterHandle" />
+            <meta name="twitter:creator" content="@seo.TwitterHandle" />
+        }
+        <meta name="twitter:title" content="@pageTitle" />
+        @if (!string.IsNullOrEmpty(seo.Description))
+        {
+            <meta name="twitter:description" content="@seo.Description" />
+        }
+        @if (!string.IsNullOrEmpty(ogImageUrl))
+        {
+            <meta name="twitter:image" content="@ogImageUrl" />
+        }
+    }
+
+    @* JSON-LD Person Schema *@
+    @if (seo.Schema.Enabled && !string.IsNullOrEmpty(profile.Name))
+    {
+        var sameAsList = new List<string>();
+        if (!string.IsNullOrEmpty(profile.LinkedInUrl)) sameAsList.Add(profile.LinkedInUrl);
+        if (!string.IsNullOrEmpty(profile.GitHubUrl)) sameAsList.Add(profile.GitHubUrl);
+        if (!string.IsNullOrEmpty(profile.UpworkUrl)) sameAsList.Add(profile.UpworkUrl);
+        if (!string.IsNullOrEmpty(profile.FiverrUrl)) sameAsList.Add(profile.FiverrUrl);
+        if (!string.IsNullOrEmpty(profile.ToptalUrl)) sameAsList.Add(profile.ToptalUrl);
+
+        var schema = new Dictionary<string, object>
+        {
+            ["@context"] = "https://schema.org",
+            ["@type"] = "Person",
+            ["name"] = profile.Name,
+            ["jobTitle"] = profile.Title,
+            ["url"] = canonicalUrl,
+            ["email"] = profile.Email,
+            ["address"] = new Dictionary<string, string>
+            {
+                ["@type"] = "PostalAddress",
+                ["addressLocality"] = profile.Location
+            },
+            ["sameAs"] = sameAsList
+        };
+        var schemaJson = System.Text.Json.JsonSerializer.Serialize(schema,
+            new System.Text.Json.JsonSerializerOptions { WriteIndented = false });
+        <script type="application/ld+json">@Html.Raw(schemaJson)</script>
+    }
+
     @if (!string.IsNullOrEmpty(layoutTitles.Favicon))
     {
         <link rel="icon" type="image/x-icon" href="@layoutTitles.Favicon" />
