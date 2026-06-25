@@ -575,6 +575,69 @@ a:hover { color: var(--accent-dark); }
 .edu-meta i { color: var(--accent); }
 
 /* ═══════════════════════════════════════════════
+   CERTIFICATIONS
+═══════════════════════════════════════════════ */
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.cert-icon-wrap {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-soft);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cert-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cert-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 .2rem;
+}
+
+.cert-issuer {
+  font-size: .92rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cert-meta {
+  font-size: .82rem;
+  color: var(--text-muted);
+}
+.cert-meta i { color: var(--accent); }
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  gap: .2rem;
+}
+.cert-link:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════════════════
    TESTIMONIALS
 ═══════════════════════════════════════════════ */
 .testimonial-card {

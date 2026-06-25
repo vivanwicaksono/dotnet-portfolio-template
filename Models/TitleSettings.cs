@@ -10,6 +10,7 @@ public class TitleSettings
     public SectionLabel Education { get; set; } = new();
     public SectionLabel Testimonials { get; set; } = new();
     public ContactTitles Contact { get; set; } = new();
+    public SectionLabel Certifications { get; set; } = new();
 }
 
 public class LayoutTitles

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Microsoft Certified: Azure Developer Associate",
+    "issuer": "Microsoft",
+    "credentialUrl": "https://learn.microsoft.com/en-us/certifications/azure-developer/",
+    "issuedOn": "Mar 2023",
+    "expiresOn": "Mar 2025"
+  },
+  {
+    "name": "Professional Scrum Master I (PSM I)",
+    "issuer": "Scrum.org",
+    "credentialUrl": "https://www.scrum.org/certificates/123456",
+    "issuedOn": "Aug 2022",
+    "expiresOn": ""
+  }
+]
