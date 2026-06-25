@@ -11,6 +11,12 @@
     "location": true,
     "linkedIn": true,
     "gitHub": true,
+    "fiverr": false,
+    "upwork": true,
+    "toptal": false,
+    "freelancer": false,
+    "guru": false,
+    "peoplePerHour": false,
     "languages": true
   },
   "experience": {
@@ -42,7 +48,13 @@
   },
   "contact": {
     "email": true,
-    "linkedIn": true
+    "linkedIn": true,
+    "fiverr": false,
+    "upwork": true,
+    "toptal": false,
+    "freelancer": false,
+    "guru": false,
+    "peoplePerHour": false
   },
   "certifications": {
     "name": true,

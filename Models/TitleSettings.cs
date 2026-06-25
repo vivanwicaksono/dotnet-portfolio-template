@@ -48,4 +48,10 @@ public class ContactTitles : SectionLabel
     public string Description { get; set; } = string.Empty;
     public string EmailButton { get; set; } = string.Empty;
     public string LinkedInButton { get; set; } = string.Empty;
+    public string FiverrButton { get; set; } = string.Empty;
+    public string UpworkButton { get; set; } = string.Empty;
+    public string ToptalButton { get; set; } = string.Empty;
+    public string FreelancerButton { get; set; } = string.Empty;
+    public string GuruButton { get; set; } = string.Empty;
+    public string PeoplePerHourButton { get; set; } = string.Empty;
 }

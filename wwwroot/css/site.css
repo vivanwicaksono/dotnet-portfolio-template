@@ -756,6 +756,108 @@ a:hover { color: var(--accent-dark); }
   box-shadow: 0 6px 20px rgba(10, 102, 194, .35);
 }
 
+.btn-contact-fiverr {
+  background: #1DBF73;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-fiverr:hover {
+  background: #17a362;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 191, 115, .35);
+}
+
+.btn-contact-upwork {
+  background: #14a800;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-upwork:hover {
+  background: #0e7a00;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20, 168, 0, .35);
+}
+
+.btn-contact-toptal {
+  background: #204ECF;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-toptal:hover {
+  background: #1638a1;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(32, 78, 207, .35);
+}
+
+.btn-contact-freelancer {
+  background: #29B2FE;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-freelancer:hover {
+  background: #0095e8;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(41, 178, 254, .35);
+}
+
+.btn-contact-guru {
+  background: #FF6B2B;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-guru:hover {
+  background: #e5531a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 43, .35);
+}
+
+.btn-contact-peopleperhour {
+  background: #6bbd45;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-peopleperhour:hover {
+  background: #52a030;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 189, 69, .35);
+}
+
 .contact-hint {
   font-size: .85rem;
   color: var(--text-muted);

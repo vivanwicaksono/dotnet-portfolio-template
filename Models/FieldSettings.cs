@@ -28,6 +28,12 @@ public class AboutFields
     public bool Location { get; set; } = true;
     public bool LinkedIn { get; set; } = true;
     public bool GitHub { get; set; } = true;
+    public bool Fiverr { get; set; } = false;
+    public bool Upwork { get; set; } = false;
+    public bool Toptal { get; set; } = false;
+    public bool Freelancer { get; set; } = false;
+    public bool Guru { get; set; } = false;
+    public bool PeoplePerHour { get; set; } = false;
     public bool Languages { get; set; } = true;
 }
 
@@ -70,6 +76,12 @@ public class ContactFields
 {
     public bool Email { get; set; } = true;
     public bool LinkedIn { get; set; } = true;
+    public bool Fiverr { get; set; } = false;
+    public bool Upwork { get; set; } = false;
+    public bool Toptal { get; set; } = false;
+    public bool Freelancer { get; set; } = false;
+    public bool Guru { get; set; } = false;
+    public bool PeoplePerHour { get; set; } = false;
 }
 
 public class CertificationsFields
