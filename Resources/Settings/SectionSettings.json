@@ -1,0 +1,9 @@
+[
+  { "key": "hero", "enabled": true, "order": 1 },
+  { "key": "about", "enabled": true, "order": 2 },
+  { "key": "experience", "enabled": true, "order": 3 },
+  { "key": "skills", "enabled": true, "order": 4 },
+  { "key": "education", "enabled": true, "order": 5 },
+  { "key": "testimonials", "enabled": false, "order": 6 },
+  { "key": "contact", "enabled": true, "order": 7 }
+]
