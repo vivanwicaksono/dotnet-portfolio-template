@@ -38,11 +38,21 @@
     "tag": "Certifications",
     "title": "Licenses & certifications"
   },
+  "projects": {
+    "tag": "Projects",
+    "title": "Things I've built"
+  },
   "contact": {
     "tag": "Contact",
-    "title": "Let's connect",
+    "title": "Let’s connect",
     "description": "Whether it’s a project, a role, or just a chat about tech — I’d love to hear from you.",
     "emailButton": "Send me an email",
-    "linkedInButton": "Connect on LinkedIn"
+    "linkedInButton": "Connect on LinkedIn",
+    "fiverrButton": "Hire me on Fiverr",
+    "upworkButton": "Hire me on Upwork",
+    "toptalButton": "Hire me on Toptal",
+    "freelancerButton": "Hire me on Freelancer",
+    "guruButton": "Hire me on Guru",
+    "peoplePerHourButton": "Hire me on PeoplePerHour"
   }
 }

@@ -1,0 +1,54 @@
+@model VivanPortfolio.Models.PortfolioViewModel
+@{
+    var fields = Model.FieldSettings.Projects;
+    var titles = Model.TitleSettings.Projects;
+}
+
+<!-- ════════════════════════════ PROJECTS ═════════════════════════════ -->
+<section class="section-block" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">@titles.Tag</span>
+            <h2 class="section-title">@titles.Title</h2>
+        </div>
+        <div class="row g-4">
+            @foreach (var project in Model.PersonalProjects)
+            {
+                <div class="col-md-8 col-lg-6">
+                    <div class="personal-project-card">
+                        <div class="personal-project-icon-wrap">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <div class="personal-project-body">
+                            @if (fields.Name)
+                            {
+                                <h3 class="personal-project-name">
+                                    @if (fields.Url && !string.IsNullOrEmpty(project.Url))
+                                    {
+                                        <a href="@project.Url" target="_blank" rel="noopener noreferrer">
+                                            @project.Name <i class="bi bi-arrow-up-right personal-project-link-icon"></i>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        @project.Name
+                                    }
+                                </h3>
+                            }
+                            @if (fields.Description && !string.IsNullOrEmpty(project.Description))
+                            {
+                                <p class="personal-project-desc">@project.Description</p>
+                            }
+                            @if (fields.Year && project.Year > 0)
+                            {
+                                <span class="personal-project-year">
+                                    <i class="bi bi-calendar3 me-1"></i>@project.Year
+                                </span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

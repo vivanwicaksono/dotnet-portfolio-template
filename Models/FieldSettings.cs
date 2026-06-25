@@ -10,6 +10,7 @@ public class FieldSettings
     public TestimonialsFields Testimonials { get; set; } = new();
     public ContactFields Contact { get; set; } = new();
     public CertificationsFields Certifications { get; set; } = new();
+    public ProjectsFields Projects { get; set; } = new();
 }
 
 public class HeroFields
@@ -27,6 +28,12 @@ public class AboutFields
     public bool Location { get; set; } = true;
     public bool LinkedIn { get; set; } = true;
     public bool GitHub { get; set; } = true;
+    public bool Fiverr { get; set; } = false;
+    public bool Upwork { get; set; } = false;
+    public bool Toptal { get; set; } = false;
+    public bool Freelancer { get; set; } = false;
+    public bool Guru { get; set; } = false;
+    public bool PeoplePerHour { get; set; } = false;
     public bool Languages { get; set; } = true;
 }
 
@@ -69,6 +76,12 @@ public class ContactFields
 {
     public bool Email { get; set; } = true;
     public bool LinkedIn { get; set; } = true;
+    public bool Fiverr { get; set; } = false;
+    public bool Upwork { get; set; } = false;
+    public bool Toptal { get; set; } = false;
+    public bool Freelancer { get; set; } = false;
+    public bool Guru { get; set; } = false;
+    public bool PeoplePerHour { get; set; } = false;
 }
 
 public class CertificationsFields
@@ -78,4 +91,12 @@ public class CertificationsFields
     public bool IssuedOn { get; set; } = true;
     public bool ExpiresOn { get; set; } = true;
     public bool CredentialUrl { get; set; } = true;
+}
+
+public class ProjectsFields
+{
+    public bool Name { get; set; } = true;
+    public bool Description { get; set; } = true;
+    public bool Url { get; set; } = true;
+    public bool Year { get; set; } = true;
 }

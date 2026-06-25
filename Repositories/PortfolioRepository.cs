@@ -24,6 +24,9 @@ public class PortfolioRepository : IPortfolioRepository
     public List<Certification> GetCertifications() =>
         JsonDataLoader.Load<List<Certification>>(DataFileNames.Certifications);
 
+    public List<PersonalProject> GetPersonalProjects() =>
+        JsonDataLoader.Load<List<PersonalProject>>(DataFileNames.PersonalProjects);
+
     public List<SectionSetting> GetSectionSettings() =>
         JsonDataLoader.Load<List<SectionSetting>>(DataFileNames.SectionSettings, "Settings");
 
