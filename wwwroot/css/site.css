@@ -765,11 +765,189 @@ a:hover { color: var(--accent-dark); }
   box-shadow: 0 6px 20px rgba(10, 102, 194, .35);
 }
 
+.btn-contact-fiverr {
+  background: #1DBF73;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-fiverr:hover {
+  background: #17a362;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 191, 115, .35);
+}
+
+.btn-contact-upwork {
+  background: #14a800;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-upwork:hover {
+  background: #0e7a00;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20, 168, 0, .35);
+}
+
+.btn-contact-toptal {
+  background: #204ECF;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-toptal:hover {
+  background: #1638a1;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(32, 78, 207, .35);
+}
+
+.btn-contact-freelancer {
+  background: #29B2FE;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-freelancer:hover {
+  background: #0095e8;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(41, 178, 254, .35);
+}
+
+.btn-contact-guru {
+  background: #FF6B2B;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-guru:hover {
+  background: #e5531a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 43, .35);
+}
+
+.btn-contact-peopleperhour {
+  background: #6bbd45;
+  color: #fff;
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-contact-peopleperhour:hover {
+  background: #52a030;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 189, 69, .35);
+}
+
 .contact-hint {
   font-size: .85rem;
   color: var(--text-muted);
   opacity: .65;
 }
+
+/* ═══════════════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════════════ */
+.personal-project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  height: 100%;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.personal-project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.personal-project-icon-wrap {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-soft);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.personal-project-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.personal-project-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 .4rem;
+}
+.personal-project-name a {
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+.personal-project-name a:hover { color: var(--accent); }
+
+.personal-project-link-icon {
+  font-size: .85rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.personal-project-desc {
+  font-size: .88rem;
+  color: var(--text-muted);
+  margin: 0 0 .75rem;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.personal-project-year {
+  display: inline-flex;
+  align-items: center;
+  font-size: .82rem;
+  color: var(--text-muted);
+}
+.personal-project-year i { color: var(--accent); }
 
 /* ═══════════════════════════════════════════════
    FOOTER

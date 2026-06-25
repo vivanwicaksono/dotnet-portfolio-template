@@ -1,0 +1,14 @@
+[
+  {
+    "name": "MindCanvas",
+    "description": "A browser-based mind mapping tool for brainstorming and organising ideas. Supports drag-and-drop nodes, collapsible branches, and export to PNG.",
+    "url": "",
+    "year": 2024
+  },
+  {
+    "name": "Cashflow",
+    "description": "A personal finance tracker for logging income and expenses, visualising spending by category, and setting monthly budgets.",
+    "url": "",
+    "year": 2023
+  }
+]

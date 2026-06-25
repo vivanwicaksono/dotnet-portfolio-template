@@ -25,7 +25,42 @@
                     <i class="bi bi-linkedin me-2"></i>@titles.LinkedInButton
                 </a>
             }
+            @if (fields.Fiverr)
+            {
+                <a href="@Model.Profile.FiverrUrl" target="_blank" rel="noopener" class="btn btn-contact-fiverr">
+                    <i class="bi bi-briefcase me-2"></i>@titles.FiverrButton
+                </a>
+            }
+            @if (fields.Upwork)
+            {
+                <a href="@Model.Profile.UpworkUrl" target="_blank" rel="noopener" class="btn btn-contact-upwork">
+                    <i class="bi bi-briefcase me-2"></i>@titles.UpworkButton
+                </a>
+            }
+            @if (fields.Toptal)
+            {
+                <a href="@Model.Profile.ToptalUrl" target="_blank" rel="noopener" class="btn btn-contact-toptal">
+                    <i class="bi bi-briefcase me-2"></i>@titles.ToptalButton
+                </a>
+            }
+            @if (fields.Freelancer)
+            {
+                <a href="@Model.Profile.FreelancerUrl" target="_blank" rel="noopener" class="btn btn-contact-freelancer">
+                    <i class="bi bi-briefcase me-2"></i>@titles.FreelancerButton
+                </a>
+            }
+            @if (fields.Guru)
+            {
+                <a href="@Model.Profile.GuruUrl" target="_blank" rel="noopener" class="btn btn-contact-guru">
+                    <i class="bi bi-briefcase me-2"></i>@titles.GuruButton
+                </a>
+            }
+            @if (fields.PeoplePerHour)
+            {
+                <a href="@Model.Profile.PeoplePerHourUrl" target="_blank" rel="noopener" class="btn btn-contact-peopleperhour">
+                    <i class="bi bi-briefcase me-2"></i>@titles.PeoplePerHourButton
+                </a>
+            }
         </div>
-        @if (fields.Email) { <p class="contact-hint mt-4">@Model.Profile.Email</p> }
     </div>
 </section>
