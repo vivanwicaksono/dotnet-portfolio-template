@@ -2,10 +2,13 @@
 @{
     var fields = Model.FieldSettings.Hero;
     var titles = Model.TitleSettings.Hero;
+    var hasBg = !string.IsNullOrEmpty(titles.HeroBackground);
+    var bgStyle = hasBg ? $"background-image: url('{titles.HeroBackground}');" : null;
+    var sectionClass = hasBg ? "hero-section hero-section--bg" : "hero-section";
 }
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-<section class="hero-section" id="hero">
+<section class="@sectionClass" id="hero" style="@bgStyle">
     <div class="hero-bg-blur"></div>
     <div class="container hero-content">
         <div class="row align-items-center min-vh-100">
