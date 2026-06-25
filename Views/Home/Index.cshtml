@@ -29,6 +29,10 @@
     {
         @await Html.PartialAsync("Partials/_Certifications", Model)
     }
+    else if (section.Key == "projects")
+    {
+        @await Html.PartialAsync("Partials/_Projects", Model)
+    }
     else if (section.Key == "testimonials")
     {
         @await Html.PartialAsync("Partials/_Testimonials", Model)

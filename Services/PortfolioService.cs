@@ -13,6 +13,7 @@ public class PortfolioService(IPortfolioRepository repository) : IPortfolioServi
         Education = repository.GetEducation(),
         Testimonials = repository.GetTestimonials(),
         Certifications = repository.GetCertifications(),
+        PersonalProjects = repository.GetPersonalProjects(),
         SectionSettings = repository.GetSectionSettings(),
         FieldSettings = repository.GetFieldSettings(),
         TitleSettings = repository.GetTitleSettings()

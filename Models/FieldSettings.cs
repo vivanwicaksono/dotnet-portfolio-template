@@ -10,6 +10,7 @@ public class FieldSettings
     public TestimonialsFields Testimonials { get; set; } = new();
     public ContactFields Contact { get; set; } = new();
     public CertificationsFields Certifications { get; set; } = new();
+    public ProjectsFields Projects { get; set; } = new();
 }
 
 public class HeroFields
@@ -78,4 +79,12 @@ public class CertificationsFields
     public bool IssuedOn { get; set; } = true;
     public bool ExpiresOn { get; set; } = true;
     public bool CredentialUrl { get; set; } = true;
+}
+
+public class ProjectsFields
+{
+    public bool Name { get; set; } = true;
+    public bool Description { get; set; } = true;
+    public bool Url { get; set; } = true;
+    public bool Year { get; set; } = true;
 }

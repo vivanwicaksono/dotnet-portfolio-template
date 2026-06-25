@@ -11,6 +11,7 @@ public class TitleSettings
     public SectionLabel Testimonials { get; set; } = new();
     public ContactTitles Contact { get; set; } = new();
     public SectionLabel Certifications { get; set; } = new();
+    public SectionLabel Projects { get; set; } = new();
 }
 
 public class LayoutTitles

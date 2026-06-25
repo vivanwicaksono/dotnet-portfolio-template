@@ -38,6 +38,10 @@
     "tag": "Certifications",
     "title": "Licenses & certifications"
   },
+  "projects": {
+    "tag": "Projects",
+    "title": "Things I've built"
+  },
   "contact": {
     "tag": "Contact",
     "title": "Let's connect",

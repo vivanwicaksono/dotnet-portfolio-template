@@ -7,7 +7,7 @@
   },
   "about": {
     "summary": true,
-    "email": true,
+    "email": false,
     "location": true,
     "linkedIn": true,
     "gitHub": true,
@@ -50,5 +50,11 @@
     "issuedOn": true,
     "expiresOn": true,
     "credentialUrl": true
+  },
+  "projects": {
+    "name": true,
+    "description": true,
+    "url": true,
+    "year": true
   }
 }

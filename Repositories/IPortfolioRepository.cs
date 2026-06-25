@@ -10,6 +10,7 @@ public interface IPortfolioRepository
     List<Education> GetEducation();
     List<Testimonial> GetTestimonials();
     List<Certification> GetCertifications();
+    List<PersonalProject> GetPersonalProjects();
     List<SectionSetting> GetSectionSettings();
     FieldSettings GetFieldSettings();
     TitleSettings GetTitleSettings();
