@@ -9,7 +9,7 @@
     <div class="hero-bg-blur"></div>
     <div class="container hero-content">
         <div class="row align-items-center min-vh-100">
-            <div class="col-lg-8">
+            <div class="col-lg-7 order-2 order-lg-1">
                 <p class="hero-greeting">@titles.Greeting</p>
                 @if (fields.Name) { <h1 class="hero-name">@Model.Profile.Name</h1> }
                 @if (fields.Title) { <h2 class="hero-title">@Model.Profile.Title</h2> }
@@ -29,9 +29,14 @@
                     }
                 </div>
             </div>
+            @if (!string.IsNullOrEmpty(titles.ProfileImage))
+            {
+                <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center justify-content-lg-end mb-5 mb-lg-0">
+                    <div class="hero-avatar-wrapper">
+                        <img src="@titles.ProfileImage" alt="@Model.Profile.Name" class="hero-avatar" />
+                    </div>
+                </div>
+            }
         </div>
     </div>
-    <a href="#about" class="scroll-down-indicator">
-        <i class="bi bi-chevron-down"></i>
-    </a>
 </section>
